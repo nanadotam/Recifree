@@ -1,0 +1,201 @@
+/* Font */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+/* Pacifico Font */
+.pacifico-regular {
+    font-family: "Pacifico", cursive;
+}
+
+/* Site Header - Set color to black for links */
+.site-header a {
+    color: #000; /* Black color for the link */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s ease; /* Smooth transition when hovered */
+}
+
+.site-header a:hover {
+    color: #ff511c; /* Optional: Change color on hover */
+}
+
+/* Main Site Header */
+.main-site-header h1 {
+    font-size: 36px;
+    color: #fff;
+    font-family: "Pacifico", cursive;
+}
+
+body {
+    background-color: #ffeae0;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+/* Navbar */
+.nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between; /* Ensures space between logo and search bar */
+    align-items: center;
+    padding: 10px 30px; /* Adjust padding to provide more space */
+    box-sizing: border-box; /* Make sure padding is included in the total width */
+}
+
+/* Site Logo */
+.site-header {
+    flex-shrink: 0; /* Prevent the logo from shrinking when the search bar grows */
+}
+
+/* Search Bar inside nav */
+.nav-search {
+    flex-grow: 1; /* Allows the search bar to take up more space */
+    display: flex;
+    justify-content: center;
+    margin-left: 20px; /* Add some space between the logo and search bar */
+}
+
+/* Inactive search bar state */
+.nav-search input {
+    width: 80%;
+    padding: 8px 15px;
+    font-size: 14px;
+    border: 1.5px solid #ff511c;
+    border-radius: 20px;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Active search bar state (when focused) */
+.nav-search input:focus {
+    border-color: #ff7c4a; /* Orange border */
+    box-shadow: 0 0 8px #ff7c4a; /* Add an orange shadow to emphasize the focus */
+    outline: none; /* Remove the default outline */
+}
+
+
+/* Video Bar */
+.video-bar {
+    margin: 20px;
+    padding-bottom: 100px;
+    display: flex;
+    justify-content: center;
+}
+
+video {
+    width: 100%;
+    max-width: 1000px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Recipe Feed */
+.recipe-feed {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+}
+
+/* Recipe Cards */
+.card-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Display 5 cards per row on larger screens */
+    gap: 100px;
+    width: 80%;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 20px;
+    outline: 2px solid #faad96;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    display: block;
+    height: auto;
+}
+
+.card:hover {
+    transform: translateY(-10px); /* Slight elevation */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2); /* Elevated shadow */
+}
+
+/* Image in the Card */
+.card img {
+    width: 100px;
+    height: 100px;
+    transform: scale(1.9);
+    display: block;
+    margin: 0 auto; 
+    position: relative;
+    object-fit: cover;
+    object-position: center;
+    /* margin-bottom: 10px; */
+    /* border-radius: 50%; */
+    transition: transform 0.3s ease; /* Smooth transition for scaling */
+    top: -50px;
+}
+
+
+.card:hover img {
+    transform: scale(2.5); /* Image grows slightly */
+}
+
+.card .food-title h1 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.card .desc-food {
+    text-align: center;
+    font-weight: 500;
+    font-size: 13px;
+    margin-bottom: 20px;
+}
+
+.card .view-recipe {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card .view-recipe button {
+    padding: 8px 10px;
+    background-color: #ff511c;
+    color: #fff;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.card .view-recipe button:hover {
+    background-color: #ff7c4a; /* Change button color on hover */
+    transform: scale(1.05); /* Slightly increase button size */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .nav-search input {
+        width: 70%; /* Adjusting width for smaller screens */
+    }
+
+    .card img {
+        height: 160px;
+    }
+
+    .card-list {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-search input {
+        width: 90%; /* Full width for mobile screens */
+    }
+
+    .card img {
+        height: 140px;
+    }
+}

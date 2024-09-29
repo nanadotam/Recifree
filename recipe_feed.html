@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/recipe-feed.css">
+    <title>Recipe Feed - Recifree</title>
+</head>
+<body>
+    <!-- Navbar with Search Bar -->
+    <section class="menu">
+        <div class="nav">
+            <!-- Site Logo/Title -->
+            <div class="site-header pacifico-regular"> 
+                <a href="landing_page.html">
+                    <h1>Recifree</h1>
+                </a>
+            </div>
+
+            <!-- Search Bar in Navbar -->
+            <div class="nav-search">
+                <input type="text" id="searchInput" placeholder="Search recipes by name or ingredient..." onkeyup="filterRecipes()">
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Bar Below Navbar -->
+    <section class="video-bar">
+        <video id="mainVideo" width="100%" autoplay muted playsinline>     
+            <source id="videoSource" src="https://videos.pexels.com/video-files/2959312/2959312-uhd_2560_1440_30fps.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </section>
+
+
+    <!-- Recipe Feed (Grid of Cards) -->
+    <section class="recipe-feed">
+        <div class="card-list">
+            <!-- Recipe Card 1 -->
+            <div class="card">
+                <img src="card-imgs/img1.png" alt="Beef Burger">
+                <div class="food-title">
+                    <h1>Beef Burger</h1>
+                </div>
+                <div class="desc-food">
+                    <p>A classic burger with fresh ingredients and delicious taste.</p>
+                </div>
+                <div class="view-recipe">
+                    <a href="recipe.html"><button>View Recipe</button></a>
+                </div>
+            </div>
+
+            <!-- Recipe Card 2 -->
+            <div class="card">
+                <img src="card-imgs/img2.png" alt="Chicken Salad">
+                <div class="food-title">
+                    <h1>Chicken Salad</h1>
+                </div>
+                <div class="desc-food">
+                    <p>A healthy chicken salad with a mix of greens and fresh vegetables.</p>
+                </div>
+                <div class="view-recipe">
+                    <a href="recipe.html"><button>View Recipe</button></a>
+                </div>
+            </div>
+
+            <!-- Recipe Card 3 -->
+            <div class="card">
+                <img src="card-imgs/img3.png" alt="Pasta Carbonara">
+                <div class="food-title">
+                    <h1>Pasta Carbonara</h1>
+                </div>
+                <div class="desc-food">
+                    <p>A delicious pasta with creamy sauce and bacon.</p>
+                </div>
+                <div class="view-recipe">
+                    <a href="recipe.html"><button>View Recipe</button></a>
+                </div>
+            </div>
+
+            <!-- Recipe Card 4 -->
+            <div class="card">
+                <img src="card-imgs/img4.png" alt="Vegan Tacos">
+                <div class="food-title">
+                    <h1>Vegan Tacos</h1>
+                </div>
+                <div class="desc-food">
+                    <p>A tasty vegan option with fresh veggies and beans.</p>
+                </div>
+                <div class="view-recipe">
+                    <a href="recipe.html"><button>View Recipe</button></a>
+                </div>
+            </div>
+
+            <!-- Recipe Card 5 -->
+            <div class="card">
+                <img src="card-imgs/img5.png" alt="Margherita Pizza">
+                <div class="food-title">
+                    <h1>Margherita Pizza</h1>
+                </div>
+                <div class="desc-food">
+                    <p>Classic Italian pizza with fresh mozzarella and basil.</p>
+                </div>
+                <div class="view-recipe">
+                    <a href="recipe.html"><button>View Recipe</button></a>
+                </div>
+            </div>
+
+            <!-- Recipe Card 6 -->
+            <div class="card">
+                <img src="card-imgs/img6.png" alt="Grilled Salmon">
+                <div class="food-title">
+                    <h1>Grilled Salmon</h1>
+                </div>
+                <div class="desc-food">
+                    <p>Perfectly grilled salmon with lemon and herbs.</p>
+                </div>
+                <div class="view-recipe">
+                    <a href="recipe.html"><button>View Recipe</button></a>
+                </div>
+            </div>
+
+            <!-- Recipe Card 7 -->
+            <div class="card">
+                <img src="card-imgs/img7.png" alt="Chocolate Cake">
+                <div class="food-title">
+                    <h1>Chocolate Cake</h1>
+                </div>
+                <div class="desc-food">
+                    <p>A rich and moist chocolate cake, perfect for dessert.</p>
+                </div>
+                <div class="view-recipe">
+                    <a href="recipe.html"><button>View Recipe</button></a>
+                </div>
+            </div>
+
+            <!-- Recipe Card 8 -->
+            <div class="card">
+                <img src="card-imgs/img8.png" alt="Avocado Toast">
+                <div class="food-title">
+                    <h1>Avocado Toast</h1>
+                </div>
+                <div class="desc-food">
+                    <p>Healthy avocado spread on whole grain toast.</p>
+                </div>
+                <div class="view-recipe">
+                    <a href="recipe.html"><button>View Recipe</button></a>
+                </div>
+            </div>
+
+            <!-- Recipe Card 9 -->
+            <div class="card">
+                <img src="card-imgs/img9.png" alt="Shrimp Scampi">
+                <div class="food-title">
+                    <h1>Shrimp Scampi</h1>
+                </div>
+                <div class="desc-food">
+                    <p>Sautéed shrimp with garlic and butter, served with pasta.</p>
+                </div>
+                <div class="view-recipe">
+                    <a href="recipe.html"><button>View Recipe</button></a>
+                </div>
+            </div>
+
+            <!-- Recipe Card 10 -->
+            <div class="card">
+                <img src="card-imgs/img10.png" alt="French Onion Soup">
+                <div class="food-title">
+                    <h1>French Onion Soup</h1>
+                </div>
+                <div class="desc-food">
+                    <p>Warm, savory soup with caramelized onions and cheese.</p>
+                </div>
+                <div class="view-recipe">
+                    <a href="recipe.html"><button>View Recipe</button></a>
+                </div>
+            </div>
+
+            <!-- Recipe Card 11 -->
+            <div class="card">
+                <img src="card-imgs/img11.png" alt="Pancakes">
+                <div class="food-title">
+                    <h1>Pancakes</h1>
+                </div>
+                <div class="desc-food">
+                    <p>Fluffy pancakes topped with syrup and butter.</p>
+                </div>
+                <div class="view-recipe">
+                    <a href="recipe.html"><button>View Recipe</button></a>
+                </div>
+            </div>
+
+            <!-- Recipe Card 12 -->
+            <div class="card">
+                <img src="card-imgs/img12.png" alt="Curry Chicken">
+                <div class="food-title">
+                    <h1>Curry Chicken</h1>
+                </div>
+                <div class="desc-food">
+                    <p>A flavorful chicken curry with spices and coconut milk.</p>
+                </div>
+                <div class="view-recipe">
+                    <a href="recipe.html"><button>View Recipe</button></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
