@@ -1,0 +1,280 @@
+/* Font imports */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+/* Pacifico Font */
+.pacifico-regular {
+    font-family: "Pacifico", cursive;
+}
+
+/* Body and general styling */
+body {
+    background-color: #ffeae0;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Site Header - Set color to black for links */
+.site-header a {
+    color: #000; /* Black color for the link */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s ease; /* Smooth transition when hovered */
+}
+
+.site-header a:hover {
+    color: #ff511c; /* Optional: Change color on hover */
+}
+
+/* Main Site Header */
+.main-site-header h1 {
+    font-size: 36px;
+    color: #fff;
+    font-family: "Pacifico", cursive;
+}
+
+/* Left Side Menu (Navigation) */
+.leftnavcontainer {
+    width: 250px;
+    height: calc(100vh - 70px);
+    position: fixed;
+    background-color: #ffeae0;
+    padding-top: 30px;
+}
+
+.leftnav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav-option {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.nav-option:hover {
+    background-color: #e0e0e0;
+}
+
+.nav img {
+    width: 30px;
+    height: 30px;
+}
+
+.logout {
+    color: red;
+    font-weight: bold;
+}
+
+/* Adjust the main container */
+.main-container {
+    margin-left: 250px; /* Offset for the left menu */
+    padding: 20px;
+}
+
+
+
+/* Navbar */
+.nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+    background: transparent; /* Adjusted from background-color */
+    color: white;
+}
+
+.nav-search {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    margin-left: 20px;
+}
+
+.nav-search input {
+    width: 80%;
+    padding: 8px 15px;
+    font-size: 14px;
+    border: 1.5px solid #ff511c;
+    border-radius: 20px;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.nav-search input:focus {
+    border-color: #ff7c4a;
+    box-shadow: 0 0 8px #ff7c4a;
+    outline: none;
+}
+
+/* Dashboard Overview Section */
+.dashboard-container {
+    padding: 20px 30px;
+    margin-top: 20px;
+}
+
+h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: #333;
+}
+
+/* Stats Cards Grid */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    justify-content: center;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 20px;
+    outline: 2px solid #faad96;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    text-align: center;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease;
+}
+
+.card .food-title h1 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.card .desc-food p {
+    font-size: 14px;
+    color: #555;
+}
+
+/* Recent Activities Section */
+.recent-activities {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.recent-activities h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.activity-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.activity {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.activity p {
+    margin: 0;
+    font-size: 16px;
+}
+
+/* =========== RESPONSIVENESS =========== */
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .nav-search input {
+        width: 70%;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* SIDEBAR */
+#sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    background: #ecdad2;
+    z-index: 2000;
+    font-family: 'Montserrat', sans-serif;
+    transition: .3s ease;
+    overflow-x: hidden;
+    scrollbar-width: none;
+    padding-top: 30px;
+}
+
+#sidebar .side-menu {
+    width: 100%;
+    margin-top: 48px;
+}
+
+#sidebar .side-menu li {
+    height: 48px;
+    background: transparent;
+    margin-left: 6px;
+    border-radius: 48px 0 0 48px;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#sidebar .side-menu li:hover {
+    background-color: #e0e0e0;
+}
+
+#sidebar .side-menu li.active {
+    background: #eee;
+    position: relative;
+}
+
+#sidebar .side-menu li a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    color: #342E37;
+    padding-left: 20px;
+}
+
+#sidebar .side-menu li img {
+    width: 30px;
+    height: 30px;
+    margin-right: 15px;
+}
+
+/* #################### */
+
+.main {
+    height: calc(100vh - 70px);
+    width: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    padding: 40px 30px 30px 30px;
+}

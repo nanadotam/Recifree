@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="styles/admin.css">
+</head>
+
+<body>
+    <header>
+        <div class="logosec">
+            <div class="logo">Recifree Admin</div>
+        </div>
+    </header>
+
+    <main>
+        <section class="analytics">
+            <h1>Dashboard</h1>
+            <div class="stat-boxes">
+                <div class="box">
+                    <h2>Total Users</h2>
+                    <p id="totalUsers">50</p> <!-- Placeholder value -->
+                </div>
+                <div class="box">
+                    <h2>Total Recipes</h2>
+                    <p id="totalRecipes">200</p> <!-- Placeholder value -->
+                </div>
+            </div>
+
+            <!-- Optional Bar Chart Section -->
+            <div class="chart">
+                <h3>Recipes Created per Month</h3>
+                <!-- Use JavaScript for dynamic charting, or a static image for now -->
+                <canvas id="recipeChart"></canvas>
+            </div>
+
+            <!-- Optional Top 5 Active Users Section -->
+            <div class="top-users">
+                <h3>Top 5 Most Active Users</h3>
+                <ul>
+                    <li>User 1: 15 recipes</li>
+                    <li>User 2: 12 recipes</li>
+                    <!-- List of top users -->
+                </ul>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
