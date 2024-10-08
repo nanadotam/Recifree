@@ -17,26 +17,32 @@
     </header>
     
     <div class="wrapper">
-        <form action="">
+        <form id="signupForm" action="">
             <h1>Sign Up</h1>
-
+            
             <div class="input-box">
-                <input type="email" placeholder="Email" required>
+                <input type="email" id="email" placeholder="Email" required>
                 <i class='bx bxs-envelope'></i>
             </div>
-
+            
+            <!-- Create error messages -->
+            <p id="emailError" class="error-msg"></p>
+            
             <div class="input-box">
-                <input type="text" placeholder="Username" required>
+                <input type="text" id="username" placeholder="Username" required> <!-- Updated ID to 'username' -->
                 <i class='bx bxs-user'></i>
             </div>
-
+            
             <div class="input-box">
-                <input type="password" placeholder="Password" required>
+                <input type="password" id="password" placeholder="Password" required> <!-- Corrected ID for password -->
                 <i class='bx bxs-lock-alt'></i>
             </div>
+            
+            <!-- Create error messages -->
+            <p id="passwordError" class="error-msg"></p>
 
             <div class="input-box">
-                <input type="password" placeholder="Confirm Password" required>
+                <input type="password" id="confirmpassword" placeholder="Confirm Password" required>
                 <i class='bx bxs-lock-alt'></i>
             </div>
 
@@ -45,7 +51,6 @@
             <div class="register-link">
                 <p>Already have an account? <a href="login.html">Log In</a></p>
             </div>
-
         </form>
     </div>
     
