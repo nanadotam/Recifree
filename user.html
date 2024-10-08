@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Management</title>
+    <link rel="stylesheet" href="styles/admin.css">
+    <link rel="stylesheet" href="styles/user-mgt.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <div id="sidebar">
+
+            <div class="site-header pacifico-regular">
+                <a href="index.html">
+                    <h1>Recifree</h1>
+                </a>
+            </div>
+
+            <ul class="side-menu">
+                <li>
+                    <a href="dashboard.html">
+                        <i class='bx bxs-dashboard' ></i>
+                        Dashboard
+                    </a>
+                </li>
+                <li>
+                    <a href="recipe.html">
+                        <i class='bx bxs-bowl-rice' ></i>
+                        Recipe Management
+                    </a>
+                </li>
+                <li class="active">
+                    <a href="user.html">
+                        <i class='bx bxs-user' ></i>
+                        User Management
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class='bx bxs-cog' ></i>
+                        Settings
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class='bx bxs-log-out' ></i>
+                        Logout
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- <header>
+                <div class="logosec">
+                    <div class="logo">Recifree Admin - User Management</div>
+                </div>
+            </header> -->
+
+            <main>
+                <section class="user-management">
+                    <h1>Manage Users</h1>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Example of user row -->
+                            <tr>
+                                <td>1</td>
+                                <td>Nana Amoako</td>
+                                <td>nana.amoako@ashesi.edu.gh</td>
+                                <td>
+                                    <button onclick="editUser(1)">Edit</button>
+                                    <button onclick="deleteUser(1)">Delete</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+
+                <section class="edit-user">
+                    <h2>Edit User</h2>
+                    <form id="editUserForm">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email">
+                        <button type="submit">Update</button>
+                    </form>
+                </section>
+            </main>
+        </div>
+    </div>
+</body>
+
+</html>

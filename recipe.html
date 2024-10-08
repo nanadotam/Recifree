@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Management</title>
+    <link rel="stylesheet" href="styles/admin.css">
+    <link rel="stylesheet" href="styles/recipe-mgt.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <div id="sidebar">
+
+            <div class="site-header pacifico-regular">
+                <a href="index.html">
+                    <h1>Recifree</h1>
+                </a>
+            </div>
+
+            <ul class="side-menu">
+                <li class="">
+                    <a href="dashboard.html">
+                        <i class='bx bxs-dashboard' ></i>
+                        Dashboard
+                    </a>
+                </li>
+                <li class="active">
+                    <a href="recipe.html">
+                        <i class='bx bxs-bowl-rice' ></i>
+                        Recipe Management
+                    </a>
+                </li>
+                <li>
+                    <a href="user.html">
+                        <i class='bx bxs-user' ></i>
+                        User Management
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class='bx bxs-cog' ></i>
+                        Settings
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class='bx bxs-log-out' ></i>
+                        Logout
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <header>
+                <!-- <div class="logosec">
+                    <div class="logo">Recifree Admin - Recipe Management</div>
+                </div> -->
+            </header>
+
+            <main>
+                <section class="recipe-management">
+                    <h1>Manage Recipes</h1>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Title</th>
+                                <th>Author</th>
+                                <th>Date Created</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Example of recipe row -->
+                            <tr>
+                                <td>1</td>
+                                <td>Fufu</td>
+                                <td>Marge</td>
+                                <td>2024-10-03</td>
+                                <td>
+                                    <button onclick="editRecipe(1)">Edit</button>
+                                    <button onclick="deleteRecipe(1)">Delete</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+
+                <section class="edit-recipe">
+                    <h2>Edit Recipe</h2>
+                    <form id="editRecipeForm">
+                        <label for="title">Title</label>
+                        <input type="text" id="title" name="title">
+                        <label for="author">Author</label>
+                        <input type="text" id="author" name="author">
+                        <button type="submit">Update</button>
+                    </form>
+                </section>
+            </main>
+        </div>
+    </div>
+</body>
+
+</html>

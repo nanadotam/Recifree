@@ -1,0 +1,142 @@
+.main-content  {
+    margin-left: 20vw;
+}
+
+
+/* Inherited Font Styles */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+/* Body Styling */
+body {
+    background-color: #ffeae0;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Styling */
+.logosec {
+    padding: 20px;
+    background-color: #ff511c;
+    color: white;
+    text-align: center;
+}
+
+.logosec .logo {
+    font-family: 'Pacifico', cursive;
+    font-size: 24px;
+    color: white;
+}
+
+/* Main Content Area */
+.main-content {
+    padding: 20px 30px;
+}
+
+/* Table Styling for Recipe Management */
+.recipe-management table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.recipe-management th, 
+.recipe-management td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #faad96; /* Border matches the accent color */
+}
+
+.recipe-management th {
+    background-color: #ff511c;
+    color: white;
+}
+
+.recipe-management td button {
+    padding: 8px 10px;
+    background-color: #ff511c;
+    color: #fff;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.recipe-management td button:hover {
+    background-color: #ff7c4a; /* Button color changes on hover */
+    transform: scale(1.05); /* Slightly enlarge button on hover */
+}
+
+/* Edit Recipe Section */
+.edit-recipe {
+    margin-top: 40px;
+}
+
+.edit-recipe h2 {
+    font-size: 24px;
+    color: #333;
+}
+
+.edit-recipe form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.edit-recipe label {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.edit-recipe input {
+    padding: 10px;
+    font-size: 14px;
+    border: 1.5px solid #ff511c;
+    border-radius: 10px;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.edit-recipe input:focus {
+    border-color: #ff7c4a;
+    box-shadow: 0 0 8px #ff7c4a;
+}
+
+.edit-recipe button {
+    padding: 10px;
+    background-color: #ff511c;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.edit-recipe button:hover {
+    background-color: #ff7c4a;
+    transform: scale(1.05);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .recipe-management table, 
+    .edit-recipe form {
+        width: 100%;
+    }
+
+    .recipe-management th, 
+    .recipe-management td {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logosec {
+        font-size: 20px;
+    }
+
+    .recipe-management table {
+        font-size: 14px;
+    }
+}
