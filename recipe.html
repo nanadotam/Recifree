@@ -13,41 +13,39 @@
     <div class="container">
         <!-- Sidebar -->
         <div id="sidebar">
-
             <div class="site-header pacifico-regular">
                 <a href="index.html">
                     <h1>Recifree</h1>
                 </a>
             </div>
-
             <ul class="side-menu">
-                <li class="">
+                <li>
                     <a href="dashboard.html">
-                        <i class='bx bxs-dashboard' ></i>
+                        <i class='bx bxs-dashboard'></i>
                         Dashboard
                     </a>
                 </li>
                 <li class="active">
                     <a href="recipe.html">
-                        <i class='bx bxs-bowl-rice' ></i>
+                        <i class='bx bxs-bowl-rice'></i>
                         Recipe Management
                     </a>
                 </li>
                 <li>
                     <a href="user.html">
-                        <i class='bx bxs-user' ></i>
+                        <i class='bx bxs-user'></i>
                         User Management
                     </a>
                 </li>
                 <li>
                     <a href="#">
-                        <i class='bx bxs-cog' ></i>
+                        <i class='bx bxs-cog'></i>
                         Settings
                     </a>
                 </li>
                 <li>
                     <a href="#">
-                        <i class='bx bxs-log-out' ></i>
+                        <i class='bx bxs-log-out'></i>
                         Logout
                     </a>
                 </li>
@@ -57,12 +55,43 @@
         <!-- Main Content -->
         <div class="main-content">
             <header>
-                <!-- <div class="logosec">
-                    <div class="logo">Recifree Admin - Recipe Management</div>
-                </div> -->
+                <h1>Recipe Management</h1>
             </header>
 
             <main>
+                <!-- Add Recipe Button -->
+                <button class ="add-recipe" id="addRecipeButton">Add Recipe</button>
+
+                <!-- Add Recipe Form (Initially Hidden) -->
+                <section class="add-recipe" id="addRecipeSection" style="display:none;">
+                    <h2>Add Recipe</h2>
+                    <form id="addRecipeForm">
+                        <label for="title">Recipe Title</label>
+                        <input type="text" id="title" name="title" required>
+
+                        <label for="ingredients">Ingredients</label>
+                        <textarea id="ingredients" name="ingredients" required></textarea>
+
+                        <label for="prepTime">Preparation Time (Minutes)</label>
+                        <input type="number" id="prepTime" name="prepTime" required>
+
+                        <label for="cookTime">Cooking Time (Minutes)</label>
+                        <input type="number" id="cookTime" name="cookTime" required>
+
+                        <label for="servings">Serving Size</label>
+                        <input type="number" id="servings" name="servings" required>
+
+                        <label for="calories">Calories per Serving</label>
+                        <input type="number" id="calories" name="calories" required>
+
+                        <label for="instructions">Instructions</label>
+                        <textarea id="instructions" name="instructions" required></textarea>
+
+                        <button type="submit">Add Recipe</button>
+                    </form>
+                </section>
+
+                <!-- Recipe List -->
                 <section class="recipe-management">
                     <h1>Manage Recipes</h1>
                     <table>
@@ -76,34 +105,52 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <!-- Example of recipe row -->
-                            <tr>
-                                <td>1</td>
-                                <td>Fufu</td>
-                                <td>Marge</td>
-                                <td>2024-10-03</td>
-                                <td>
-                                    <button onclick="editRecipe(1)">Edit</button>
-                                    <button onclick="deleteRecipe(1)">Delete</button>
-                                </td>
-                            </tr>
+                            <!-- The table rows will be dynamically inserted by JavaScript -->
                         </tbody>
                     </table>
                 </section>
 
-                <section class="edit-recipe">
+                <!-- Edit Recipe Form (Initially Hidden) -->
+                <section class="edit-recipe" id="editRecipeSection" style="display:none;">
                     <h2>Edit Recipe</h2>
                     <form id="editRecipeForm">
-                        <label for="title">Title</label>
-                        <input type="text" id="title" name="title">
-                        <label for="author">Author</label>
-                        <input type="text" id="author" name="author">
-                        <button type="submit">Update</button>
+                        <label for="editTitle">Recipe Title</label>
+                        <input type="text" id="editTitle" name="editTitle">
+
+                        <label for="editIngredients">Ingredients</label>
+                        <textarea id="editIngredients" name="editIngredients"></textarea>
+
+                        <label for="editPrepTime">Preparation Time (Minutes)</label>
+                        <input type="number" id="editPrepTime" name="editPrepTime">
+
+                        <label for="editCookTime">Cooking Time (Minutes)</label>
+                        <input type="number" id="editCookTime" name="editCookTime">
+
+                        <label for="editServings">Serving Size</label>
+                        <input type="number" id="editServings" name="editServings">
+
+                        <label for="editCalories">Calories per Serving</label>
+                        <input type="number" id="editCalories" name="editCalories">
+
+                        <label for="editInstructions">Instructions</label>
+                        <textarea id="editInstructions" name="editInstructions"></textarea>
+
+                        <button type="submit">Update Recipe</button>
                     </form>
                 </section>
+
+                <!-- Modal for viewing recipe details -->
+                <div id="recipeModal" class="modal">
+                    <div class="modal-content">
+                        <span class="close-btn">&times;</span>
+                        <h2>Recipe Details</h2>
+                        <p id="recipeDetails"></p>
+                    </div>
+                </div>
             </main>
         </div>
     </div>
+    <script src="src/recipe-management.js"></script>
 </body>
 
 </html>
