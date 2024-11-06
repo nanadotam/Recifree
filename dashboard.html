@@ -7,78 +7,57 @@
     <link rel="stylesheet" href="styles/admin.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <title>Admin Dashboard - Recifree</title>
-    <!-- Apex Charts -->
-    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 </head>
 
 <body>
-
-  
-
     <!-- Sidebar -->
     <div id="sidebar">
-
         <div class="site-header pacifico-regular">
             <a href="index.html">
                 <h1>Recifree</h1>
             </a>
         </div>
-
         <ul class="side-menu">
             <li class="active">
-                <a href="dashboard.html">
-                    <i class='bx bxs-dashboard' ></i>
+                <a href="dashboard.php">
+                    <i class='bx bxs-dashboard'></i>
                     Dashboard
                 </a>
             </li>
             <li>
                 <a href="recipe.html">
-                    <i class='bx bxs-bowl-rice' ></i>
+                    <i class='bx bxs-bowl-rice'></i>
                     Recipe Management
                 </a>
             </li>
             <li>
                 <a href="user.html">
-                    <i class='bx bxs-user' ></i>
+                    <i class='bx bxs-user'></i>
                     User Management
                 </a>
             </li>
             <li>
-                <a href="#">
-                    <i class='bx bxs-cog' ></i>
-                    Settings
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <i class='bx bxs-log-out' ></i>
+                <a href="php/logout.php">
+                    <i class='bx bxs-log-out'></i>
                     Logout
                 </a>
             </li>
         </ul>
     </div>
 
-
     <!-- Dashboard Container -->
     <section class="main">
-        <!-- Navbar with Search Bar -->
-
-    <section class="menu">
-        <div class="nav">
-            <!-- Site Logo/Title -->
-
-
-            <!-- Search Bar in Navbar -->
-            <div class="nav-search">
-                <input type="text" id="searchInput" placeholder="Search in dashboard...">
+        <section class="menu">
+            <div class="nav">
+                <div class="nav-search">
+                    <p>Welcome, <?php echo $userName; ?>! (<?php echo $userRole; ?>)</p>
+                    <input type="text" id="searchInput" placeholder="Search in dashboard...">
+                </div>
             </div>
-        </div>
-    </section>
-
+        </section>
 
         <section class="dashboard-container">
             <h2>Dashboard Overview</h2>
-            
             <div class="dashboard-main-content">
                 <!-- Stats Section -->
                 <div class="stats-grid">
@@ -89,10 +68,10 @@
                             <h1>Total Users</h1>
                         </div>
                         <div class="desc-food">
-                            <p>1234 registered users</p>
+                            <p><?php echo $totalUsers; ?> registered users</p>
                         </div>
                     </div>
-                    
+
                     <!-- Total Recipes -->
                     <div class="card">
                         <i class='bx bxs-bowl-rice'></i>
@@ -100,42 +79,15 @@
                             <h1>Total Recipes</h1>
                         </div>
                         <div class="desc-food">
-                            <p>567 recipes shared</p>
-                        </div>
-                    </div>
-                    
-                    <!-- Analytics Section (Optional) -->
-                    <div class="card">
-                        <i class='bx bx-stats' ></i>
-                        <div class="food-title">
-                            <h1>Analytics</h1>
-                        </div>
-                        <div class="desc-food">
-                            <p>Monthly Recipe Insights</p>
+                            <p><?php echo $totalRecipes; ?> recipes shared</p>
                         </div>
                     </div>
                 </div>
-                
-                <!-- Recent Activities Section -->
-                <section class="recent-activities">
-                    <h3>Recent Activities</h3>
-                    <div class="activity-list">
-                        <div class="activity">
-                            <p>User Nana Amoako added a new recipe: <strong>Fufu</strong></p>
-                        </div>
-                        <div class="activity">
-                            <p>Marge added a new recipe for Indomie</p>
-                        </div>
-                        <div class="activity">
-                            <p>New recipe added: <strong>Tuo Zaafi</strong></p>
-                        </div>
-                    </div>
-                </section>
-            </section>
+            </div>
+        </section>
     </section>
 
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
-    <script src="src/admin.js"></script>
 </body>
 
 </html>

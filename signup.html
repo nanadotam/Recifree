@@ -17,42 +17,63 @@
     </header>
     
     <div class="wrapper">
-        <form id="signupForm" action="">
+        <!-- Updated form action to point to PHP registration script in php/ directory -->
+        <form id="signupForm" action="php/register.php" method="POST">
             <h1>Sign Up</h1>
             
             <div class="input-box">
-                <input type="email" id="email" placeholder="Email" required>
-                <i class='bx bxs-envelope'></i>
+                <input type="text" name="fname" placeholder="First Name" required>
+                <i class='bx bxs-user'></i>
             </div>
-            
-            <!-- Create error messages -->
-            <p id="emailError" class="error-msg"></p>
-            
+
             <div class="input-box">
-                <input type="text" id="username" placeholder="Username" required> <!-- Updated ID to 'username' -->
+                <input type="text" name="lname" placeholder="Last Name" required>
                 <i class='bx bxs-user'></i>
             </div>
             
             <div class="input-box">
-                <input type="password" id="password" placeholder="Password" required> <!-- Corrected ID for password -->
-                <i class='bx bxs-lock-alt'></i>
+                <input type="email" name="email" placeholder="Email" required>
+                <i class='bx bxs-envelope'></i>
             </div>
             
-            <!-- Create error messages -->
-            <p id="passwordError" class="error-msg"></p>
+            <div class="input-box">
+                <input type="password" name="password" id="password" placeholder="Password" required>
+                <i class='bx bxs-lock-alt'></i>
+            </div>
 
             <div class="input-box">
                 <input type="password" id="confirmpassword" placeholder="Confirm Password" required>
                 <i class='bx bxs-lock-alt'></i>
             </div>
 
-            <button type="submit" class="btn">Sign Up</button>
+            <!-- Display error message from PHP if set -->
+            <p id="errorMessage" class="error-msg">
+                <?php
+                if (isset($_GET['error'])) {
+                    echo htmlspecialchars($_GET['error']);
+                }
+                ?>
+            </p>
+
+            <button type="submit" class="btn" onclick="return validateForm()">Sign Up</button>
 
             <div class="register-link">
                 <p>Already have an account? <a href="login.html">Log In</a></p>
             </div>
         </form>
     </div>
-    
+
+    <!-- JavaScript to check password match -->
+    <script>
+        function validateForm() {
+            const password = document.getElementById("password").value;
+            const confirmPassword = document.getElementById("confirmpassword").value;
+            if (password !== confirmPassword) {
+                document.getElementById("errorMessage").innerText = "Passwords do not match.";
+                return false;
+            }
+            return true;
+        }
+    </script>
 </body>
 </html>

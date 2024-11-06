@@ -1,15 +1,15 @@
-// Mock db credentials
-const testUsername = 'nanaamoako';   // superuser
-const testPassword = 'password@!23';
+// // Mock db credentials
+// const testUsername = 'nanaamoako';   // superuser
+// const testPassword = 'password@!23';
 
 document.getElementById('signupForm').addEventListener('submit', function(event){
-    event.preventDefault(); // Prevent form submission until validation passes
+    // event.preventDefault(); // Prevent form submission until validation passes
 
     let valid = true;
     let email = document.getElementById('email').value;
     let username = document.getElementById('username').value; // Updated ID for username
     let password = document.getElementById('password').value;
-    let confirmpassword = document.getElementById('confirmpassword').value;
+    let confirmPassword = document.getElementById('confirmpassword').value;
     let emailError = document.getElementById('emailError');
     let passwordError = document.getElementById('passwordError');
 
@@ -32,7 +32,7 @@ document.getElementById('signupForm').addEventListener('submit', function(event)
     }
 
     // Confirm password validation
-    if (password !== confirmpassword) {
+    if (password !== confirmPassword) {
         passwordError.textContent = 'Passwords don\'t match';
         valid = false; // Mark form as invalid
     }
